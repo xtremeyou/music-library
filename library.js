@@ -34,7 +34,7 @@ const library = {
       `${playlist2.id}: ${playlist2.name} - ${playlist2.tracks.length} tracks`
     );
   },
-  
+
   printTracks: function () {
     let playlist2 = this.tracks;
     console.log(
@@ -52,7 +52,7 @@ const library = {
   printPlaylist: function () {
     playlistId = this.tracks;
     console.log(
-      `p01: ${library.playlists.p01.name} - ${library.playlists.p01.tracks.length}`
+      `p01: ${library.playlists.p01.name} - ${library.playlists.p01.tracks.length} tracks`
     );
     console.log(
       `t01: ${playlistId.t01.artist} by ${playlistId.t01.name} (${playlistId.t01.album})`
@@ -77,18 +77,17 @@ const library = {
       album: album,
     };
     this.tracks[id] = newTrack;
-    console.log(`Track ${name} by ${artist} added with ID ${id}.`);
   },
   addPlaylist: function(name) {
     const id = this.generateUid();
 
-    const newPlayliist = {
+    const newPlaylist = {
       id: id,
       name: name,
       tracks: [],
     };
-    library.playlists[id] = newPlayliist;
-    console.log(`Playlist ${name} added with ID ${id}.`);
+    library.playlists[id] = newPlaylist;
+
   },
  };
 library.printPlaylists();
